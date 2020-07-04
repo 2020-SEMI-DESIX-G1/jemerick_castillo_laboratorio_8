@@ -1,0 +1,21 @@
+body{
+    background-color:aliceblue;
+}
+.datos p {
+    float: right;
+    margin-right: 30px;
+    font-size: 20px;
+}
+a.createbtn {
+    float: right;
+    background-color: #3e748c;
+    padding: 15px;
+    color: white;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 50px;
+}
+h1.align-title {
+    color: black;
+    margin-top: 15px;
+}

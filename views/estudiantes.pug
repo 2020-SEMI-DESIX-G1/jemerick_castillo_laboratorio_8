@@ -1,0 +1,27 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous')
+  link(href='/css/style.css' rel='stylesheet' ) 
+.container
+  .row
+    .col-lg-6
+        h1.align-title Lista de Estudiantes
+    .col-lg-6
+        a.createbtn(href='/estudiantes_create/') Crear nuevo estudiante
+  hr
+  .row
+    each estudiante in estudiantes
+        .col-lg-6
+            h4 #{estudiante.nombre}
+        .col-lg-6.datos
+            p 
+                a(href='/estudiantes_delete/'+ estudiante._id) Delete
+            p 
+                a(href='/estudiantes_update/'+ estudiante._id) Actualizar
+            p
+                a(href='/estudiantes/' + estudiante._id) Ver información
+
+        
